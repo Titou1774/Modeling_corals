@@ -56,13 +56,17 @@ Outputs:
     - Imports "*RhineData.py*" as a module.
     - Writes all selected parameters ("*RhineData.py*" + pollution values) into a text file "*Internal/PythonParameters.txt*".
 - "*functions_humanimpact.c*"
+    - Imports "*functions_humanimpact.h*" as a module
     - Reads in "*Internal/PythonParameters.txt*".
     - Performs computations.
     - Exports results into the CSV "*Internal/CalculatedData.csv*".
 -"*implementation_equa_diff.c*"
     -
 -"*ecosystem_simulation.c*"
-    -
+    -Main code
+    -Imports "*functions_humanimpact.h*" and "*determination_temperature_pH.h*" as modules.
+
+  
 -"determination_temperature_pH.c"
 
 - "*visualisation_pollution.py*"
@@ -73,7 +77,9 @@ Outputs:
     - Writes a summary file to "*Results*".
 -"*visualisation_acidite.py*"
 -"*regressionlineaire.py*"
--"*visualisation_temperature_impact*"
+-"*visualisation_temperature_impact.py*"
+-"*functions_humanimpact.h*"
+-"*determination_temperature_pH.h*"
 
 ## Instructions
 
