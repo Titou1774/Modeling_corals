@@ -17,7 +17,7 @@ The program will:
 - As the data used were few in number, it was quicker to write them directly to the code. We mention them in the code. 
 - "*Internal*" contains files used for passing information between C and Python. They are automatically edited by the program and should not be manually modified.
 - "*Code*" contains program code.
-- "*Results*" contains saved .jpg files of graphs and a summary .txt file.
+- "*Output*" contains saved .png files.
 
 ### Inputs and Outputs
 
@@ -25,18 +25,18 @@ Inputs:
 - As the data used were few in number, it was quicker to write them directly to the code. We mention them in the code.
 
 Internal files:
-- **Internal/ecosystem_simulation_results.csv** is a comma-delimited file.
-- **Internal/CO2_terrain.csv** , 1 column and 10'000 rows file.
-- **Internal/acidite_terrain.csv**, 1 column and 10'000 rows file.
-- **Internal/valeurs_uniques_pH_sante.csv** , is a comma-delimited file.
+- "*Internal/ecosystem_simulation_results.csv*" is a comma-delimited file.
+- "*Internal/CO2_terrain.csv*" , 1 column and 10'000 rows file.
+- "*Internal/acidite_terrain.csv*", 1 column and 10'000 rows file.
+- "*Internal/valeurs_uniques_pH_sante.csv*" , is a comma-delimited file.
 
 Outputs:
 - "*Results*" contains several image files, each has a custom name of format: "*Dissolved_Oxygen_{Month}_{Value}_percent.png*". You can save them or delete them as required.
 - "*Results/Results.txt*" is a text file containing summarized information of the simulation, such as critical time and distance. Do **not** delete this file.
-- **C02_atmosphere_figure.png** is an image file, showing the C02 concentration in the atmosphere
-- **pH_water_figure.png** is an image file, showing the pH of water
-- **observation_results.png** is an image file, plotting the datas collected
-- **final_curve.png** is an image file, plotting the relation between coral health and the pH of water
+- "*C02_atmosphere_figure.png*" is an image file, showing the C02 concentration in the atmosphere
+- "*pH_water_figure.png*" is an image file, showing the pH of water
+- "*observation_results.png*" is an image file, plotting the datas collected for linear regression
+- "*final_curve.png*" is an image file, plotting the relation between coral health and the pH of water, after the linear regression
 
 ## Implementation details
 
@@ -44,9 +44,9 @@ Outputs:
 
 - The simulation is handled by C. It directly outputs the results of computation into a CSV file.
 - Python reads CSV file values, which contains parameters selected by the user and plot CSV contents.
-- The simulation is handled by C. It directly outputs the results of computation into 3 other CSV file ( **Internal/CO2_terrain.csv** , **Internal/acidite_terrain.csv** , **Internal/valeurs_uniques_pH_sante.csv** ).
-- 2 Python program reads  **Internal/CO2_terrain.csv** and **Internal/acidite_terrain.csv** respectively, which contains parameters selected by the user and plot CSV contents.
-- The last Python program make the linear regression with the Numpy modul and plot the results.
+- The simulation is handled by C. It directly outputs the results of computation into 3 other CSV file ( "*Internal/CO2_terrain.csv*" , "*Internal/acidite_terrain.csv*" , "*Internal/valeurs_uniques_pH_sante.csv*" ).
+- 2 Python program reads  "*Internal/CO2_terrain.csv*" and "*Internal/acidite_terrain.csv*" respectively, which contains parameters selected by the user and plot CSV contents.
+- The last Python program reads"*Internal/valeurs_uniques_pH_sante.csv*" and make the linear regression  with the Numpy modul and plot the results.
 
 **Structure**: In the directory "*Code/*" are located:
 - "*RhineData.py*"
@@ -55,16 +55,25 @@ Outputs:
 - "*Parameterchoice.py*"
     - Imports "*RhineData.py*" as a module.
     - Writes all selected parameters ("*RhineData.py*" + pollution values) into a text file "*Internal/PythonParameters.txt*".
-- "*Computations.c*"
+- "*functions_humanimpact.c*"
     - Reads in "*Internal/PythonParameters.txt*".
     - Performs computations.
     - Exports results into the CSV "*Internal/CalculatedData.csv*".
-- "*Visualisation.py*"
+-"*implementation_equa_diff.c*"
+    -
+-"*ecosystem_simulation.c*"
+    -
+-"determination_temperature_pH.c"
+
+- "*visualisation_pollution.py*"
     - Executes the compiled C file.
     - Reads in the CSV "*Internal/CalculatedData.csv*".
     - Plots results in a separate window.
     - Saves key plots to directory "*Results*".
     - Writes a summary file to "*Results*".
+-"*visualisation_acidite.py*"
+-"*regressionlineaire.py*"
+-"*visualisation_temperature_impact*"
 
 ## Instructions
 
