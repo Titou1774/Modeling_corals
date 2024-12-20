@@ -33,7 +33,7 @@ void save_to_csv(const char *filename, double *t, double *w, double *a, double *
         perror("Erreur d'ouverture du fichier") ;
         return ;
     }
-    fprintf(file, "Time,W,A,C,S,Temperature,pH\n") ;
+    fprintf(file, "Time,W,A,C,S,Temperature\n") ;
     for (int i = 0 ; i < size ; i++) {
         fprintf(file, "%f,%f,%f,%f,%f,%f\n", t[i], w[i], a[i], c[i], s[i], T[i]) ;
     }
