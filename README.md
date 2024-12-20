@@ -60,20 +60,20 @@ Outputs:
     - Imports "*functions_humanimpact.h*" as a module
     - Performs computations only via functions
 
--"determination_temperature_pH.c"
+- "determination_temperature_pH.c"
     - Performs computations only via functions
 
--"*implementation_equa_diff.c*"
+- "*implementation_equa_diff.c*"
     -Import "*determination_temperature_pH.h*" as module
     -Export results in the CSV: "*ecosystem_simulation_results.csv*"
     -Performs compuatations via functions and via "*determination_temperature_pH.c*"
 
--"*ecosystem_simulation.c*"
+- "*ecosystem_simulation.c*"
     -Main code
     -Imports "*functions_humanimpact.c*","*determination_temperature_pH.c*", "*implementation_equa_diff.c*" as modules.
     -Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
   
--"*visualisation_temperature_impact.py*"
+- "*visualisation_temperature_impact.py*"
     - Reads in the CSV "*Internal/ecosystem_simulation_results.csv*".
     - Plots results in a separate window.
     - Saves key plots to directory "*Output*".
@@ -83,12 +83,12 @@ Outputs:
     - Plots results in a separate window.
     - Saves key plots to directory "*Output*".
 
--"*visualisation_acidite.py*"
+- "*visualisation_acidite.py*"
     - Reads in the CSV "*Internal/acidite_terrain.csv*" and make the pH figure(see report)
     - Plots results in a separate window.
     - Saves key plots to directory "*Output*".
 
--"*regressionlineaire.py*"
+- "*regressionlineaire.py*"
     - Reads in the CSV "*Internal/valeurs_uniques_pH_sante.csv*" and compute the model"
     - Plots results in a separate window.
     - Saves key plots to directory "*Output*".
