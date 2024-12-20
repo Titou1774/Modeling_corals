@@ -43,10 +43,10 @@ Outputs:
 **Overview:**
 
 - The simulation is handled by C. It directly outputs the results of computation into a CSV file.
-- Python reads CSV file values, which contains parameters selected by the user and plot CSV contents.
+- Python reads CSV file values, which contains parameters and plot CSV contents.
 - The simulation is handled by C. It directly outputs the results of computation into 3 other CSV file ( "*Internal/CO2_terrain.csv*" , "*Internal/acidite_terrain.csv*" , "*Internal/valeurs_uniques_pH_sante.csv*" ).
 - 2 Python program reads  "*Internal/CO2_terrain.csv*" and "*Internal/acidite_terrain.csv*" respectively, which contains parameters selected by the user and plot CSV contents.
-- The last Python program reads"*Internal/valeurs_uniques_pH_sante.csv*" and make the linear regression  with the Numpy modul and plot the results.
+- The last Python program reads"*Internal/valeurs_uniques_pH_sante.csv*", make the linear regression  with the Numpy module and plot the results.
 
 **Structure**: In the directory "*Code/*" are located:
 - "*RhineData.py*"
