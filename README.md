@@ -5,17 +5,17 @@
 This program simulates in first the impact of temperature on a coral reef in Gili Island. In a second time, the program simulate a release of pollutants and how it impacts the corals.
 
 The program will:
-1. Solve a differential system equations and save the results in a CSV file (**resolution_modelisation.c**)
-2. Plot the results of the CSV file (**visualisation_modele.py**)
-3. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV file (**main_humanimpact.c**)
-4. Plot the results of the two CSV file (**visualisation_pollution.py** and **visualisation_acidite.py** respectively)
-5. Apply linear regression method on datas collected in one of the CSV file and plot it (**linearregression.py**)
-6. All graphs results obtained, and key figures will be saved in "*Results*" as .png .
+1. Apply a function that solve a differential system of equations, that save results in a CSV file ("ecosystem_simulation_results.csv")
+2. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV file ("*ecosystem_simulation.c*")
+3. Plot the results of the CSV file("*ecosystem_simulation_results.csv*") in the following python file: "*visualisation_modele.py*"
+4. Plot the results of the two CSV file ("*C02_terrain.csv*" and "*acidite_terrain.csv*") in the following python file: "*visualisation_pollution.py*" and "*visualisation_acidite.py*" respectively
+5. Apply linear regression method on datas collected in the CSV file ("*valeurs_uniques_pH_sante.csv*") and plot it in following python file: "*regressionlineaire.py*"
+6. All graphs results obtained, and key figures will be saved in "*Ouptut*" as .png
 
-## Project structure !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+## Project structure
 
 - As the data used were few in number, it was quicker to write them directly to the code. We mention them in the code. 
-- "*Internal*" contains files used for passing information between C and Python. They are automatically edited by the program and should not be manually modified.
+- "*Internal*" contains files used for passing information between C and Python. They are automatically edited by the program and should not be manually modified (.csv files). 
 - "*Code*" contains program code.
 - "*Output*" contains saved .png files.
 
@@ -25,14 +25,13 @@ Inputs:
 - As the data used were few in number, it was quicker to write them directly to the code. We mention them in the code.
 
 Internal files:
-- "*Internal/ecosystem_simulation_results.csv*" is a comma-delimited file.
-- "*Internal/CO2_terrain.csv*" , 1 column and 10'000 rows file.
+- "*Internal/ecosystem_simulation_results.csv*", is a comma-delimited file.
+- "*Internal/CO2_terrain.csv*", 1 column and 10'000 rows file.
 - "*Internal/acidite_terrain.csv*", 1 column and 10'000 rows file.
-- "*Internal/valeurs_uniques_pH_sante.csv*" , is a comma-delimited file.
+- "*Internal/valeurs_uniques_pH_sante.csv*", is a comma-delimited file.
 
 Outputs:
-- "*Results*" contains several image files, each has a custom name of format: "*Dissolved_Oxygen_{Month}_{Value}_percent.png*". You can save them or delete them as required.
-- "*Results/Results.txt*" is a text file containing summarized information of the simulation, such as critical time and distance. Do **not** delete this file.
+- "*Output*" contains several image files, each has a custom name of format: "*Name.png*". Do **not** delete this type of file.
 - "*C02_atmosphere_figure.png*" is an image file, showing the C02 concentration in the atmosphere
 - "*pH_water_figure.png*" is an image file, showing the pH of water
 - "*observation_results.png*" is an image file, plotting the datas collected for linear regression
@@ -49,12 +48,6 @@ Outputs:
 - The last Python program reads"*Internal/valeurs_uniques_pH_sante.csv*", make the linear regression  with the Numpy module and plot the results.
 
 **Structure**: In the directory "*Code/*" are located:
-- "*RhineData.py*"
-    - Reads in the CSVs located in "*Data*".
-    - Computes average monthly values of river parameters : flowrate / temperature / dissolved oxygen...
-- "*Parameterchoice.py*"
-    - Imports "*RhineData.py*" as a module.
-    - Writes all selected parameters ("*RhineData.py*" + pollution values) into a text file "*Internal/PythonParameters.txt*".
  
 - "*functions_humanimpact.c*"
     - Imports "*functions_humanimpact.h*" as a module
