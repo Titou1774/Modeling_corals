@@ -63,20 +63,16 @@ Outputs:
 -"determination_temperature_pH.c"
     - Performs computations only via functions
 
-
 -"*implementation_equa_diff.c*"
     -Import "*determination_temperature_pH.h*" as module
     -Export results in the CSV: "*ecosystem_simulation_results.csv*"
-    
+    -Performs compuatations via functions and via "*determination_temperature_pH.c*"
+
 -"*ecosystem_simulation.c*"
     -Main code
-    -Imports "*functions_humanimpact.h*" and "*determination_temperature_pH.h*" as modules.
+    -Imports "*functions_humanimpact.c*","*determination_temperature_pH.c*", "*implementation_equa_diff.c*" as modules.
     -Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
   
-
-
-
-
 -"*visualisation_temperature_impact.py*"
     - Reads in the CSV "*Internal/ecosystem_simulation_results.csv*".
     - Plots results in a separate window.
@@ -123,23 +119,22 @@ The program will run automatically, and will open two plotting windows in full s
 Versions of Python and C used are as follows.
 ```
 $ python --version
-Python 3.11.5
+Python 3.12.4
 
 $ gcc --version
-Apple clang version 14.0.0
-```
+(Rev3, Built by MSYS2 project) 13.2.0
+
 The Python libraries utilized were the following:
 ```
-pandas 2.1.4 py311hdb55bb0_0
+pandas 2.2.2 py312h0158946_0
 
-numpy 1.26.0 py311h728a8a3_0  
-numpy-base 1.26.0 py311h53bf9ac_0
+numpy 1.26.4 py312hfd52020_0  
+numpy-base 1.26.4 py312h4dde369_0
 
 subprocess 2.4
 
-matplotlib 3.8.0 py311hecd8cb5_0  
-matplotlib-base 3.8.0 py311h41a4f6b_0  
-matplotlib-inline 0.1.6 py311hecd8cb5_0 
+matplotlib 3.9.3 pypi_0 pypi
+matplotlib-inline 0.1.6 py312haa95532_0 
 
 csv 1.0
 ```
