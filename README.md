@@ -59,13 +59,13 @@ Outputs:
     - Imports "*functions_humanimpact.h*" as a module
     - Reads in "*Internal/PythonParameters.txt*".
     - Performs computations.
-    - Exports results into the CSV "*Internal/CalculatedData.csv*".
+    
 -"*implementation_equa_diff.c*"
     -
 -"*ecosystem_simulation.c*"
     -Main code
     -Imports "*functions_humanimpact.h*" and "*determination_temperature_pH.h*" as modules.
-
+    -Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
   
 -"determination_temperature_pH.c"
 
@@ -75,7 +75,9 @@ Outputs:
     - Plots results in a separate window.
     - Saves key plots to directory "*Results*".
     - Writes a summary file to "*Results*".
+
 -"*visualisation_acidite.py*"
+    -
 -"*regressionlineaire.py*"
 -"*visualisation_temperature_impact.py*"
 -"*functions_humanimpact.h*"
