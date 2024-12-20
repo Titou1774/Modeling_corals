@@ -6,7 +6,7 @@ This program simulates in first the impact of temperature on a coral reef in Gil
 
 The program will:
 1. Apply a function that solve a differential system of equations, that save results in a CSV file ("ecosystem_simulation_results.csv")
-2. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV file ("*ecosystem_simulation.c*")
+2. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV file("*C02_terrain.csv*", "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*") in "*ecosystem_simulation.c*"
 3. Plot the results of the CSV file("*ecosystem_simulation_results.csv*") in the following python file: "*visualisation_modele.py*"
 4. Plot the results of the two CSV file ("*C02_terrain.csv*" and "*acidite_terrain.csv*") in the following python file: "*visualisation_pollution.py*" and "*visualisation_acidite.py*" respectively
 5. Apply linear regression method on datas collected in the CSV file ("*valeurs_uniques_pH_sante.csv*") and plot it in following python file: "*regressionlineaire.py*"
