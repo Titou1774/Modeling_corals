@@ -20,8 +20,23 @@
 #define facteur_climatique 0.15 // See report for this choice of parameter
 #define nbr_month 12
 
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------ PARAMETERS----------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------
+//This part of code contains all the parameters that you can change as you want for the simulation. We advice you to take the following, to have a realistic simulation.
+
+
 #define taillex 100     // dimensions of water field
 #define tailley 100
+#define depart_x = 0;   			// Its the departure of simulation, we can think about a port that release C02 with boat, or just a factory that eject gas
+#define depart_y = 0;
+#define concentration_c02 = 275;  		// We know that the concentration in the atmosphere is about 300 ppm. We assume that a single boat release a bit less than this
+#define r = 3;					//We assume an initial plume radius of 3 meters
+#define years = 20;				//Simulation over 20 years
+
+
 
 
 int main() {
@@ -119,13 +134,6 @@ int main() {
 		}
 	} 
     
-    double depart_x = 0;   // Its the departure of simulation, we can think about a port that release C02 with boat, or just a factory that eject gas
-    double depart_y = 0;
-	 
-	//Simulation of throwing packages of C02 over 20 years
-	double concentration_c02 = 275;  // We know that the concentration in the atmosphere is about 300 ppm. We assume that a single boat release a bit less than this
-	double r = 3;					//We assume an initial plume radius of 3 meters
-	int years = 20;					//Simulation over 20 years
 	for(int i = 0; i<years; i++){
 		for(int day = 0; day<365; day++){
 			
