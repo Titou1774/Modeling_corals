@@ -64,14 +64,14 @@ Outputs:
     - Performs computations only via functions
 
 - "*implementation_equa_diff.c*"
-    -Import "*determination_temperature_pH.h*" as module
-    -Export results in the CSV: "*ecosystem_simulation_results.csv*"
-    -Performs compuatations via functions and via "*determination_temperature_pH.c*"
+    - Import "*determination_temperature_pH.h*" as module
+    - Export results in the CSV: "*ecosystem_simulation_results.csv*"
+    - Performs compuatations via functions and via "*determination_temperature_pH.c*"
 
 - "*ecosystem_simulation.c*"
-    -Main code
-    -Imports "*functions_humanimpact.c*","*determination_temperature_pH.c*", "*implementation_equa_diff.c*" as modules.
-    -Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
+    - Main code
+    - Imports "*functions_humanimpact.c*","*determination_temperature_pH.c*", "*implementation_equa_diff.c*" as modules.
+    - Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
   
 - "*visualisation_temperature_impact.py*"
     - Reads in the CSV "*Internal/ecosystem_simulation_results.csv*".
