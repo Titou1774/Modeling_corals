@@ -30,11 +30,11 @@
 
 #define taillex 100     // dimensions of water field
 #define tailley 100
-#define depart_x = 0;   			// Its the departure of simulation, we can think about a port that release C02 with boat, or just a factory that eject gas
-#define depart_y = 0;
-#define concentration_c02 = 275;  		// We know that the concentration in the atmosphere is about 300 ppm. We assume that a single boat release a bit less than this
-#define r = 3;					//We assume an initial plume radius of 3 meters
-#define years = 20;				//Simulation over 20 years
+#define depart_x 0   			// Its the departure of simulation, we can think about a port that release C02 with boat, or just a factory that eject gas
+#define depart_y 0
+#define concentration_c02 275  		// We know that the concentration in the atmosphere is about 300 ppm. We assume that a single boat release a bit less than this
+#define r 3					//We assume an initial plume radius of 3 meters
+#define years 20				//Simulation over 20 years
 
 
 
