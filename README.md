@@ -61,7 +61,8 @@ Outputs:
     - Performs computations.
     
 -"*implementation_equa_diff.c*"
-    -
+    -Export results in the CSV: "*ecosystem_simulation_results.csv*"
+    
 -"*ecosystem_simulation.c*"
     -Main code
     -Imports "*functions_humanimpact.h*" and "*determination_temperature_pH.h*" as modules.
@@ -75,13 +76,14 @@ Outputs:
     - Plots results in a separate window.
     - Saves key plots to directory "*Results*".
     - Writes a summary file to "*Results*".
-
+-"*visualisation_pollution.py*"
+    - Reads in the CSV "*C02_terrain.csv*" and make the C02 figure(see report)
 -"*visualisation_acidite.py*"
-    -
+    - Reads in the CSV "*acidite_terrain.csv*" and make the pH figure(see report)
 -"*regressionlineaire.py*"
+    - Reads in the CSV "*valeurs_uniques_pH_sante.csv*" and compute the model"
 -"*visualisation_temperature_impact.py*"
--"*functions_humanimpact.h*"
--"*determination_temperature_pH.h*"
+
 
 ## Instructions
 
