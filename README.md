@@ -91,7 +91,7 @@ Outputs:
 ## Instructions
 
 To reproduce results in the report, four steps should be followed:
-1. Navigate to the "*Parameterchoice.py*" function located in the "*Code*" directory. The function contains commented instructions for the user to modify input parameters. Modify as desired, and save the file.
+1. Navigate to the "*ecosystem_simulation.c*" function located in the "*Code*" directory. The function contains commented instructions for the user to modify input parameters. Modify as desired.
 2. Navigate to the makefile to ensure the Python interpreter selected is yours.
 3. Open the terminal from the project root directory (location of this README.md file). You can check this is the case by typing:
     ```
