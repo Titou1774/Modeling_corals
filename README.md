@@ -6,18 +6,18 @@ This program simulates in first the impact of temperature on a coral reef in Gil
 
 The program will:
 1. Apply a function that solve a differential system of equations, that save results in a CSV file ("ecosystem_simulation_results.csv")
-2. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV file("*C02_terrain.csv*", "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*") in "*ecosystem_simulation.c*"
-3. Plot the results of the CSV file("*ecosystem_simulation_results.csv*") in the following python file: "*visualisation_modele.py*"
-4. Plot the results of the two CSV file ("*C02_terrain.csv*" and "*acidite_terrain.csv*") in the following python file: "*visualisation_pollution.py*" and "*visualisation_acidite.py*" respectively
+2. Simulate the release of CO2 in atmosphere and how it's affect the pH of the ocean and save the results in 3 CSV files ("*C02_terrain.csv*", "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*") in "*ecosystem_simulation.c*"
+3. Plot the results of the CSV file ("*ecosystem_simulation_results.csv*") in the following python file: "*visualisation_modele.py*"
+4. Plot the results of the two CSV files ("*C02_terrain.csv*" and "*acidite_terrain.csv*") in the following python files: "*visualisation_pollution.py*" and "*visualisation_acidite.py*" respectively
 5. Apply linear regression method on datas collected in the CSV file ("*valeurs_uniques_pH_sante.csv*") and plot it in following python file: "*regressionlineaire.py*"
 6. All graphs results obtained, and key figures will be saved in "*Ouptut*" as .png
 
 ## Project structure
 
 - As the data used were few in number, it was quicker to write them directly to the code. We mention them in the code. 
-- "*Internal*" contains files used for passing information between C and Python. They are automatically edited by the program and should not be manually modified (.csv files). 
-- "*Code*" contains program code.
-- "*Output*" contains saved .png files.
+- "*Internal*" contains files used for passing information between C and Python. They are automatically edited by the program and should not be manually modified (.csv files)
+- "*Code*" contains program code
+- "*Output*" contains saved .png files
 
 ### Inputs and Outputs
 
