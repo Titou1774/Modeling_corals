@@ -55,12 +55,17 @@ Outputs:
 - "*Parameterchoice.py*"
     - Imports "*RhineData.py*" as a module.
     - Writes all selected parameters ("*RhineData.py*" + pollution values) into a text file "*Internal/PythonParameters.txt*".
+ 
 - "*functions_humanimpact.c*"
     - Imports "*functions_humanimpact.h*" as a module
-    - Reads in "*Internal/PythonParameters.txt*".
-    - Performs computations.
-    
+    - Performs computations only via functions
+
+-"determination_temperature_pH.c"
+    - Performs computations only via functions
+
+
 -"*implementation_equa_diff.c*"
+    -Import "*determination_temperature_pH.h*" as module
     -Export results in the CSV: "*ecosystem_simulation_results.csv*"
     
 -"*ecosystem_simulation.c*"
@@ -68,25 +73,30 @@ Outputs:
     -Imports "*functions_humanimpact.h*" and "*determination_temperature_pH.h*" as modules.
     -Export results in CSV: "*C02_terrain.csv*, "*acidite_terrain.csv*", "*valeurs_uniques_pH_sante.csv*"
   
--"determination_temperature_pH.c"
 
-- "*visualisation_pollution.py*"
-    - Executes the compiled C file.
-    - Reads in the CSV "*Internal/CalculatedData.csv*".
-    - Plots results in a separate window.
-    - Saves key plots to directory "*Results*".
-    - Writes a summary file to "*Results*".
 
--"*visualisation_pollution.py*"
-    - Reads in the CSV "*C02_terrain.csv*" and make the C02 figure(see report)
 
--"*visualisation_acidite.py*"
-    - Reads in the CSV "*acidite_terrain.csv*" and make the pH figure(see report)
-
--"*regressionlineaire.py*"
-    - Reads in the CSV "*valeurs_uniques_pH_sante.csv*" and compute the model"
 
 -"*visualisation_temperature_impact.py*"
+    - Reads in the CSV "*Internal/ecosystem_simulation_results.csv*".
+    - Plots results in a separate window.
+    - Saves key plots to directory "*Output*".
+    
+- "*visualisation_pollution.py*"
+    - Reads in the CSV "*Internal/C02_terrain.csv*".
+    - Plots results in a separate window.
+    - Saves key plots to directory "*Output*".
+
+-"*visualisation_acidite.py*"
+    - Reads in the CSV "*Internal/acidite_terrain.csv*" and make the pH figure(see report)
+    - Plots results in a separate window.
+    - Saves key plots to directory "*Output*".
+
+-"*regressionlineaire.py*"
+    - Reads in the CSV "*Internal/valeurs_uniques_pH_sante.csv*" and compute the model"
+    - Plots results in a separate window.
+    - Saves key plots to directory "*Output*".
+
 
 
 ## Instructions
