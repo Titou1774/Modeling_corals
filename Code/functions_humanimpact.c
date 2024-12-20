@@ -75,12 +75,6 @@ void simulePollution(int x, int y, double r, double c, double * tableau) {
         if ((x < 0 || x >= taillex) || (y < 0 || y >= tailley)) {
             break;
         }
-        //Condition to be sure that the plume concentration stay constant, that is not increasing
-        if (c>275){
-			c = 275;
-		}
-
-
 
  // Propagation of CO2 over space
         for (int dx = -r; dx <= r; dx++) { // Loop over the x-offsets within the radius r
